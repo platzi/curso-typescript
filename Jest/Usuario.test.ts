@@ -1,10 +1,12 @@
-import { Usuario } from './usuario';
+import { Usuario } from './Usuario';
 
 describe('Usuario Class', () => {
+    let usuario: Usuario;
+
     beforeEach(() => {
         usuario = new Usuario('Amin', 'amin@example.com', 'Developer', 10, true);
       });
-
+    
       test('should return the correct name', () => {
         expect(usuario.getName()).toBe('Amin');
       });
@@ -22,5 +24,4 @@ describe('Usuario Class', () => {
         usuario = new Usuario('Amin', 'amin@example.com', 'Developer', 10, false);
         expect(usuario.isStillActive()).toBe(false);
       });
-    
 });
